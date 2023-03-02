@@ -31,6 +31,12 @@ void MyColor::editColor(int r, int g, int b)
 	B = b;
 }
 
+std::string MyColor::viewColor()
+{
+	std::string result = "r=" + std::to_string(R) + "g=" + std::to_string(G) + "b=" + std::to_string(B) + "\n";
+	return result;
+}
+
 MyColor::~MyColor()
 {
 	printf("~MyColor() for \"%d\" with r=\"%d\" g=\"%d\" b=\"%d\"\n", (int)this % 1000, R, G, B);
